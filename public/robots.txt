@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# DA COMPLETARE: quando c'è il dominio, aggiungere la riga
+# Sitemap: https://DOMINIO/sitemap.xml

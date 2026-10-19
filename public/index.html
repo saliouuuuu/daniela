@@ -1,0 +1,786 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daniela Impastato | Consulente d'Immagine e Personal Shopper a Canale (CN)</title>
+<meta name="description" content="Daniela Impastato, consulente d'immagine e personal shopper a Canale, nel Roero (CN). Studio in Piazza Bernardi 34. Prenota una consulenza su WhatsApp.">
+<meta name="theme-color" content="#FAF5EF">
+<meta name="robots" content="index, follow">
+<meta name="geo.region" content="IT-CN">
+<meta name="geo.placename" content="Canale">
+<!-- DA COMPLETARE: sostituire dominio-da-completare.example con il dominio vero (canonical, Open Graph) -->
+<link rel="canonical" href="https://dominio-da-completare.example/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:site_name" content="Daniela Impastato">
+<meta property="og:title" content="Daniela Impastato | Consulente d'Immagine e Personal Shopper a Canale (CN)">
+<meta property="og:description" content="Consulente d'immagine e personal shopper a Canale, nel Roero. Prenota una consulenza su WhatsApp.">
+<meta property="og:url" content="https://dominio-da-completare.example/">
+<meta property="og:image" content="https://dominio-da-completare.example/assets/img/daniela-divano.webp">
+<meta property="og:image:alt" content="Daniela Impastato, consulente d'immagine e personal shopper">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<link rel="preload" href="assets/fonts/cormorant-300.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/img/daniela-divano.webp" as="image" type="image/webp" fetchpriority="high">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Daniela Impastato, Consulente d'Immagine e Personal Shopper",
+  "founder": { "@type": "Person", "name": "Daniela Impastato", "jobTitle": "Consulente d'Immagine e Personal Shopper" },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Piazza Bernardi 34",
+    "postalCode": "12043",
+    "addressLocality": "Canale",
+    "addressRegion": "CN",
+    "addressCountry": "IT"
+  }
+}
+</script>
+
+<script>document.documentElement.className += ' js';</script>
+<style>
+@font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 300; font-display: swap; src: url('assets/fonts/cormorant-300.woff2') format('woff2'); }
+@font-face { font-family: 'Cormorant Garamond'; font-style: italic; font-weight: 300; font-display: swap; src: url('assets/fonts/cormorant-300-italic.woff2') format('woff2'); }
+@font-face { font-family: 'Cormorant Garamond'; font-style: italic; font-weight: 400; font-display: swap; src: url('assets/fonts/cormorant-400-italic.woff2') format('woff2'); }
+@font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 100 1000; font-display: swap; src: url('assets/fonts/dm-sans.woff2') format('woff2'); }
+
+:root {
+  --avorio: #FAF5EF;
+  --cipria: #E9CFC6;
+  --rosa: #B98A8C;          /* solo decorazioni e testi grandi */
+  --rosa-testo: #8A5A5E;    /* rosa antico per i testi piccoli su avorio (5,2:1) */
+  --cacao: #3B2A24;
+  --oro: #B8956A;           /* su cacao (4,9:1) e come decorazione */
+  --oro-scuro: #8A6A3F;     /* oro per i testi piccoli su avorio (4,6:1) */
+  --serif: 'Cormorant Garamond', 'Cormorant', Georgia, 'Times New Roman', serif;
+  --sans: 'DM Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --ease: cubic-bezier(.22, .7, .2, 1);
+  --pad: clamp(1.25rem, 5vw, 3rem);
+  --sezione: clamp(4.5rem, 10vw, 8.5rem);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; scroll-padding-top: 4.5rem; }
+body {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--cacao);
+  background: var(--avorio);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+h1, h2, h3, p, ul, ol, figure { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+button, input, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 2px solid var(--oro); outline-offset: 3px; border-radius: 4px; }
+
+.skip { position: absolute; left: 1rem; top: -4rem; z-index: 200; background: var(--cacao); color: var(--avorio); padding: .7rem 1.1rem; border-radius: 999px; text-decoration: none; transition: top .2s; }
+.skip:focus { top: 1rem; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* grana leggera: un solo riquadro SVG minuscolo ripetuto */
+body::after {
+  content: ""; position: fixed; inset: 0; z-index: 150; pointer-events: none; opacity: .07;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .23 0 0 0 0 .16 0 0 0 0 .14 0 0 0 .8 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.container { width: min(1180px, 100%); margin-inline: auto; padding-inline: var(--pad); }
+section { position: relative; padding-block: var(--sezione); }
+.eyebrow { display: block; font-size: .78rem; letter-spacing: .22em; text-transform: uppercase; font-weight: 500; color: var(--oro-scuro); margin-bottom: 1.1rem; }
+.on-dark .eyebrow, .hero .eyebrow { color: var(--oro); }
+h2 { font-family: var(--serif); font-weight: 300; font-size: clamp(2.6rem, 7.4vw, 5rem); line-height: 1.02; letter-spacing: -.01em; }
+h2 em, h1 em { font-style: italic; font-weight: 300; color: var(--rosa-testo); }
+.on-dark h2 em { color: var(--cipria); }
+.todo { background: rgba(184, 149, 106, .22); outline: 1px dashed var(--oro); outline-offset: 2px; border-radius: 3px; padding: 0 .25em; font-style: normal; }
+.on-dark .todo { background: rgba(184, 149, 106, .25); }
+
+/* pulsanti a pillola */
+.pill {
+  display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+  min-height: 3rem; padding: .7rem 1.7rem; border-radius: 999px;
+  font-size: .95rem; font-weight: 500; letter-spacing: .02em; text-decoration: none;
+  border: 1px solid currentColor; background: transparent;
+  transition: background-color .35s var(--ease), color .35s var(--ease), border-color .35s var(--ease), transform .35s var(--ease);
+}
+.pill:hover { transform: translateY(-1px); }
+.pill--solid { background: var(--cacao); color: var(--avorio); border-color: var(--cacao); }
+.pill--solid:hover { background: var(--rosa-testo); border-color: var(--rosa-testo); }
+.pill--light { color: var(--avorio); }
+.pill--light:hover { background: var(--avorio); color: var(--cacao); }
+.pill--gold { color: var(--oro); }
+.pill--gold:hover { background: var(--oro); color: var(--cacao); }
+.pill svg { width: 1.1em; height: 1.1em; flex: none; }
+
+/* ============ HEADER ============ */
+.head {
+  position: fixed; inset: 0 0 auto 0; z-index: 100; height: 4.5rem;
+  color: var(--avorio);
+  transition: background-color .4s var(--ease), color .4s var(--ease), box-shadow .4s var(--ease);
+}
+.head.is-solid, .head.is-open { background: var(--avorio); color: var(--cacao); box-shadow: 0 1px 0 rgba(59, 42, 36, .08); }
+.head-in { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.logo { font-family: var(--serif); font-size: 1.55rem; font-weight: 300; letter-spacing: .01em; text-decoration: none; white-space: nowrap; }
+.logo em { font-style: italic; }
+.menu-btn { width: 3rem; height: 3rem; border: 0; background: none; display: grid; place-items: center; margin-right: -.6rem; }
+.menu-btn span, .menu-btn span::before, .menu-btn span::after { display: block; width: 1.5rem; height: 1.5px; background: currentColor; position: relative; transition: transform .35s var(--ease), background-color .2s; }
+.menu-btn span::before, .menu-btn span::after { content: ""; position: absolute; left: 0; }
+.menu-btn span::before { top: -7px; } .menu-btn span::after { top: 7px; }
+.head.is-open .menu-btn span { background: transparent; }
+.head.is-open .menu-btn span::before { top: 0; transform: rotate(45deg); }
+.head.is-open .menu-btn span::after { top: 0; transform: rotate(-45deg); }
+.nav { display: none; }
+.head-cta { display: none; }
+.nav-panel {
+  position: absolute; left: 0; right: 0; top: 4.5rem; background: var(--avorio); color: var(--cacao);
+  padding: 1rem var(--pad) 2rem; box-shadow: 0 24px 40px -20px rgba(59, 42, 36, .25);
+  display: grid; gap: .1rem; transform-origin: top; clip-path: inset(0 0 100% 0); visibility: hidden;
+  transition: clip-path .5s var(--ease), visibility 0s .5s;
+}
+.head.is-open .nav-panel { clip-path: inset(0 0 0 0); visibility: visible; transition: clip-path .5s var(--ease), visibility 0s; }
+.nav-panel a { font-family: var(--serif); font-size: 2rem; font-weight: 300; text-decoration: none; padding: .55rem 0; border-bottom: 1px solid rgba(59, 42, 36, .1); }
+.nav-panel .pill { margin-top: 1.4rem; font-family: var(--sans); font-size: .95rem; border-bottom: 1px solid var(--cacao); }
+@media (min-width: 900px) {
+  .menu-btn, .nav-panel { display: none; }
+  .nav { display: flex; gap: 2rem; }
+  .nav a { font-size: .9rem; letter-spacing: .04em; text-decoration: none; position: relative; padding: .4rem 0; }
+  .nav a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+  .nav a:hover::after, .nav a[aria-current="true"]::after { transform: scaleX(1); }
+  .head-cta { display: inline-flex; min-height: 2.6rem; padding: .5rem 1.4rem; font-size: .88rem; }
+}
+
+/* ============ HERO ============ */
+.hero { min-height: 100vh; min-height: 100svh; padding: 0; display: flex; align-items: flex-end; color: var(--avorio); background: var(--cacao); overflow: hidden; isolation: isolate; }
+.hero-img { position: absolute; inset: 0; z-index: -2; }
+.hero-img img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; }
+.hero::before {  /* velo caldo: scuro in basso dove sta il testo, cipria in alto */
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(59, 42, 36, .38) 0%, rgba(59, 42, 36, .08) 28%, rgba(59, 42, 36, .55) 62%, rgba(46, 31, 26, .9) 100%),
+    radial-gradient(70% 55% at 80% 18%, rgba(233, 207, 198, .35), transparent 70%);
+}
+.hero-in { width: 100%; padding-bottom: clamp(2.5rem, 8vh, 5rem); padding-top: 7rem; }
+h1 { font-family: var(--serif); font-weight: 300; font-size: clamp(4rem, 19vw, 11.5rem); line-height: .86; letter-spacing: -.025em; text-wrap: balance; }
+h1 em { color: var(--cipria); font-style: italic; }
+.hero-sub { margin-top: 1.6rem; font-size: clamp(.82rem, 2.6vw, 1rem); letter-spacing: .2em; text-transform: uppercase; font-weight: 500; line-height: 1.8; color: var(--cipria); }
+.hero-cta { margin-top: 2.2rem; }
+.hero-line { display: block; overflow: hidden; padding-bottom: .16em; margin-bottom: -.16em; }
+@media (min-width: 900px) { .hero-line { display: inline-block; } .hero-line + .hero-line { margin-left: .2em; } h1 { font-size: clamp(5rem, 10.5vw, 11.5rem); line-height: .95; } }
+.js .hero-line > span { display: block; transform: translateY(105%); animation: sale 1.2s var(--ease) .15s forwards; }
+.js .hero-line:nth-child(2) > span { animation-delay: .3s; }
+.js .hero-sub, .js .hero-cta { opacity: 0; animation: appare 1s var(--ease) .75s forwards; }
+.js .hero-cta { animation-delay: .95s; }
+@keyframes sale { to { transform: none; } }
+@keyframes appare { to { opacity: 1; } }
+
+/* ============ STRISCIA DI PAROLE ============ */
+.striscia { padding: 1.5rem 0; background: var(--cipria); color: var(--cacao); overflow: hidden; border-block: 1px solid rgba(59, 42, 36, .12); }
+.striscia-track { display: flex; width: max-content; animation: scorre 38s linear infinite; }
+.striscia-gruppo { display: flex; align-items: center; flex: none; }
+.striscia-gruppo li { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: clamp(1.5rem, 4vw, 2.3rem); white-space: nowrap; padding-inline: 1.4rem; }
+.striscia-gruppo li::after { content: "/"; margin-left: 2.8rem; color: var(--rosa); font-style: normal; }
+@keyframes scorre { to { transform: translateX(-50%); } }
+
+/* ============ CHI SONO ============ */
+.chi { background:
+  radial-gradient(60% 45% at 8% 10%, rgba(233, 207, 198, .55), transparent 70%),
+  radial-gradient(50% 40% at 95% 85%, rgba(184, 149, 106, .14), transparent 70%),
+  var(--avorio); }
+.chi-grid { display: grid; gap: 3.5rem; align-items: center; }
+.chi-foto { position: relative; width: min(100%, 440px); margin-inline: auto; aspect-ratio: 1 / 1.12; }
+.chi-foto figure { position: absolute; border-radius: 28px; overflow: hidden; box-shadow: 0 30px 60px -28px rgba(59, 42, 36, .45); background: var(--cipria); }
+.chi-foto img { width: 100%; height: 100%; object-fit: cover; }
+.chi-foto .f1 { left: 0; top: 0; width: 62%; aspect-ratio: 3 / 4; }
+.chi-foto .f2 { right: 0; bottom: 0; width: 56%; aspect-ratio: 3 / 4; border: 6px solid var(--avorio); }
+.chi-didascalia { position: absolute; left: 0; bottom: -.4rem; max-width: 42%; font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 1.05rem; line-height: 1.3; color: var(--rosa-testo); }
+.chi-testo h2 { margin-bottom: 1.8rem; }
+.chi-testo p { max-width: 34rem; }
+.chi-testo .pill { margin-top: 2rem; }
+@media (min-width: 900px) { .chi-grid { grid-template-columns: 1.02fr 1fr; gap: 6rem; } .chi-didascalia { font-size: 1.2rem; } }
+
+/* ============ SERVIZI ============ */
+.servizi { color: var(--avorio); background:
+  radial-gradient(70% 55% at 85% 0%, rgba(185, 138, 140, .28), transparent 70%),
+  radial-gradient(60% 50% at 0% 100%, rgba(184, 149, 106, .2), transparent 70%),
+  radial-gradient(40% 40% at 50% 55%, rgba(233, 207, 198, .06), transparent 70%),
+  var(--cacao); overflow: hidden; }
+.servizi-testa { margin-bottom: 1rem; max-width: 40rem; }
+.servizi-testa p { margin-top: 1.4rem; color: var(--cipria); }
+.car { --cw: min(78vw, 330px); margin-top: 1rem; }
+.car-track {
+  position: relative; display: flex; gap: 1.1rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth;
+  padding: 2.4rem calc(50% - var(--cw) / 2) 2.8rem; scrollbar-width: none; overscroll-behavior-x: contain;
+}
+.car-track::-webkit-scrollbar { display: none; }
+.car-track:focus-visible { outline-offset: -4px; }
+.card {
+  flex: 0 0 var(--cw); scroll-snap-align: center; scroll-snap-stop: always;
+  background: var(--avorio); color: var(--cacao); border-radius: 26px; overflow: hidden;
+  display: flex; flex-direction: column; box-shadow: 0 34px 60px -30px rgba(0, 0, 0, .6);
+  transform: perspective(1100px) rotateY(var(--r, 0deg)) scale(var(--s, 1)); opacity: var(--o, 1); will-change: transform;
+}
+.card-foto { aspect-ratio: 4 / 4.6; background: var(--cipria); position: relative; overflow: hidden; }
+.card-foto img { width: 100%; height: 100%; object-fit: cover; }
+.card-foto--vuota { display: grid; place-items: center; text-align: center; padding: 1.5rem;
+  background: radial-gradient(80% 70% at 50% 30%, rgba(255, 255, 255, .5), transparent 70%), linear-gradient(160deg, var(--cipria), #d9b3a8); }
+.card-foto--vuota::before { content: ""; position: absolute; inset: .8rem; border: 1px solid rgba(138, 106, 63, .55); border-radius: 18px; }
+.card-foto--vuota > div { display: grid; justify-items: center; gap: .7rem; position: relative; }
+.card-foto--vuota svg { width: 3.2rem; height: 3.2rem; color: var(--oro-scuro); }
+.card-foto--vuota span { font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; color: var(--cacao); }
+.card-body { padding: 1.4rem 1.5rem 1.6rem; display: flex; flex-direction: column; gap: .5rem; flex: 1; }
+.card-cat { font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; font-weight: 500; color: var(--oro-scuro); }
+.card h3 { font-family: var(--serif); font-weight: 400; font-size: 1.85rem; line-height: 1.08; }
+.card p { font-size: .95rem; line-height: 1.55; flex: 1; }
+.card .pill { margin-top: .9rem; align-self: flex-start; min-height: 2.7rem; padding: .5rem 1.4rem; }
+.car-bar { display: flex; align-items: center; justify-content: center; gap: 1.2rem; }
+.car-conta { font-size: .85rem; letter-spacing: .14em; color: var(--cipria); min-width: 4rem; text-align: center; }
+.car-btn { width: 3.4rem; height: 3rem; padding: 0; border-radius: 999px; border: 1px solid var(--oro); background: transparent; color: var(--oro); display: grid; place-items: center; transition: background-color .3s, color .3s, opacity .3s; }
+.car-btn:hover:not(:disabled) { background: var(--oro); color: var(--cacao); }
+.car-btn:disabled { opacity: .35; cursor: default; }
+.car-btn svg { width: 1.3rem; height: 1.3rem; }
+@media (min-width: 900px) { .car { --cw: 340px; } .car-track { gap: 1.6rem; } }
+
+/* ============ COME FUNZIONA ============ */
+.come { background: radial-gradient(55% 45% at 100% 0%, rgba(233, 207, 198, .6), transparent 70%), var(--avorio); }
+.come h2 { margin-bottom: 3.2rem; max-width: 30rem; }
+.passi { display: grid; gap: 2.6rem 3rem; counter-reset: passo; }
+.passo { position: relative; padding-top: 1.6rem; border-top: 1px solid rgba(59, 42, 36, .22); }
+.passo-n { font-family: var(--serif); font-weight: 300; font-style: italic; font-size: clamp(3.4rem, 8vw, 5rem); line-height: 1; color: var(--rosa); display: block; margin-bottom: .8rem; }
+.passo h3 { font-family: var(--serif); font-weight: 400; font-size: 1.7rem; line-height: 1.15; margin-bottom: .5rem; }
+@media (min-width: 700px) { .passi { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { .passi { grid-template-columns: repeat(4, 1fr); gap: 2.5rem; } }
+
+/* ============ RECENSIONI ============ */
+.recensioni { background: radial-gradient(60% 50% at 0% 0%, rgba(255, 255, 255, .35), transparent 70%), var(--cipria); }
+.voto { display: flex; align-items: center; flex-wrap: wrap; gap: .6rem 1.2rem; margin-bottom: 3rem; }
+.stelle { display: flex; gap: .25rem; color: var(--oro-scuro); }
+.stelle svg { width: 1.3rem; height: 1.3rem; }
+.voto p { font-size: 1.02rem; font-weight: 500; }
+.rec-grid { display: grid; gap: 1.4rem; }
+.rec { background: var(--avorio); border-radius: 26px; padding: 2rem 1.8rem; display: flex; flex-direction: column; gap: 1.2rem; box-shadow: 0 24px 44px -30px rgba(59, 42, 36, .4); }
+.rec blockquote { margin: 0; font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 1.45rem; line-height: 1.35; flex: 1; }
+.rec cite { font-style: normal; font-size: .88rem; letter-spacing: .08em; color: var(--rosa-testo); font-weight: 500; }
+.recensioni .link { display: inline-block; margin-top: 2.2rem; font-weight: 500; }
+@media (min-width: 900px) { .rec-grid { grid-template-columns: repeat(3, 1fr); } }
+
+/* ============ PRENOTA ============ */
+.prenota { background:
+  radial-gradient(60% 50% at 100% 100%, rgba(233, 207, 198, .6), transparent 70%),
+  var(--avorio); }
+.prenota-grid { display: grid; gap: 3.5rem; }
+.prenota h2 { margin-bottom: 1.4rem; }
+.prenota-intro { max-width: 30rem; margin-bottom: 2rem; }
+.wiz { background: #fff9f4; border: 1px solid rgba(184, 149, 106, .45); border-radius: 30px; padding: clamp(1.5rem, 4vw, 2.5rem); box-shadow: 0 30px 60px -38px rgba(59, 42, 36, .5); }
+.wiz-top { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1.4rem; font-size: .8rem; letter-spacing: .16em; text-transform: uppercase; color: var(--oro-scuro); font-weight: 500; }
+.wiz-barra { flex: 1; height: 2px; background: rgba(59, 42, 36, .12); border-radius: 2px; overflow: hidden; }
+.wiz-barra i { display: block; height: 100%; width: 33.33%; background: var(--oro); transition: width .5s var(--ease); }
+.wiz fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+.wiz legend, .wiz .passo-titolo { font-family: var(--serif); font-weight: 400; font-size: clamp(1.6rem, 4.6vw, 2.1rem); line-height: 1.15; margin-bottom: 1.2rem; padding: 0; }
+.wiz [data-step]:focus { outline: none; }
+.opts { display: grid; gap: .65rem; }
+.opt { position: relative; }
+.opt input { position: absolute; opacity: 0; inset: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+.opt > span { display: block; padding: .95rem 1.2rem; border: 1px solid rgba(59, 42, 36, .25); border-radius: 18px; background: var(--avorio); transition: border-color .25s, background-color .25s, transform .25s var(--ease); }
+.opt input:checked + span { border-color: var(--oro-scuro); background: var(--cipria); }
+.opt input:focus-visible + span { outline: 2px solid var(--oro); outline-offset: 3px; }
+.opt:hover > span { border-color: var(--oro); }
+.wiz textarea { width: 100%; min-height: 8rem; padding: 1rem 1.2rem; border: 1px solid rgba(59, 42, 36, .25); border-radius: 18px; background: var(--avorio); resize: vertical; line-height: 1.55; }
+.wiz textarea:focus-visible { outline: 2px solid var(--oro); outline-offset: 2px; }
+.wiz-nav { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-top: 1.6rem; flex-wrap: wrap; }
+.wiz-nav .indietro { background: none; border: 0; padding: .6rem 0; text-decoration: underline; text-underline-offset: 4px; color: var(--rosa-testo); font-weight: 500; }
+.wiz-nav .indietro[hidden] { display: none; }
+.wiz-errore { margin-top: 1rem; font-size: .92rem; color: #8c2f39; min-height: 1.3em; }
+.wiz-esito { margin-top: 1rem; padding: 1rem 1.2rem; border-radius: 16px; background: rgba(184, 149, 106, .2); font-size: .95rem; }
+.voce { display: grid; gap: 1.8rem; align-content: start; }
+.voce h3 { font-family: var(--serif); font-weight: 300; font-size: clamp(1.9rem, 5vw, 2.6rem); line-height: 1.1; }
+.voce .azioni { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1rem; }
+.studio { border-radius: 26px; overflow: hidden; background: var(--cipria); }
+.studio img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.studio-testo { padding: 1.2rem 1.4rem 1.4rem; }
+.studio-testo strong { font-family: var(--serif); font-weight: 400; font-size: 1.5rem; display: block; line-height: 1.2; margin-bottom: .2rem; }
+.studio-testo a { display: inline-block; margin-top: .6rem; font-weight: 500; }
+@media (min-width: 900px) { .prenota-grid { grid-template-columns: 1.1fr 1fr; gap: 5rem; align-items: start; } }
+
+/* ============ FOOTER ============ */
+.foot { background: var(--cacao); color: var(--cipria); padding-block: 3.5rem; font-size: .95rem; }
+.foot-grid { display: grid; gap: 2rem; }
+.foot .logo { color: var(--avorio); display: inline-block; margin-bottom: .6rem; }
+.foot a { text-underline-offset: 3px; }
+.foot-link { display: flex; flex-wrap: wrap; gap: .4rem 1.6rem; }
+.foot small { display: block; margin-top: 2rem; padding-top: 1.4rem; border-top: 1px solid rgba(233, 207, 198, .2); font-size: .82rem; opacity: .85; }
+@media (min-width: 800px) { .foot-grid { grid-template-columns: 1.3fr 1fr 1fr; } }
+
+/* ============ COMPARSA ALLO SCROLL ============ */
+.js .reveal { opacity: 0; transform: translateY(22px); transition: opacity 1s var(--ease), transform 1s var(--ease); transition-delay: var(--d, 0s); }
+.js .reveal.in { opacity: 1; transform: none; }
+.js .chi-foto .f1 { transition: transform 1.2s var(--ease); }
+
+/* ============ RIDUCI MOVIMENTO ============ */
+@media (prefers-reduced-motion: reduce) {
+  html, .car-track { scroll-behavior: auto; }
+  .js .hero-line > span, .js .hero-sub, .js .hero-cta { animation: none; opacity: 1; transform: none; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  .striscia-track { animation: none; width: auto; justify-content: center; }
+  .striscia-gruppo[aria-hidden="true"] { display: none; }
+  .striscia-gruppo { flex-wrap: wrap; justify-content: center; }
+  .card { transform: none !important; opacity: 1 !important; will-change: auto; }
+  .nav-panel, .wiz-barra i, .pill, .head { transition: none; }
+}
+@media print { .head, .striscia, body::after { display: none; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#contenuto">Salta al contenuto</a>
+
+<header class="head" id="head">
+  <div class="container head-in">
+    <a class="logo" href="#top" aria-label="Daniela Impastato, torna in cima">Daniela <em>Impastato</em></a>
+    <nav class="nav" aria-label="Principale">
+      <a href="#chi-sono">Chi sono</a>
+      <a href="#servizi">Servizi</a>
+      <a href="#come-funziona">Come funziona</a>
+      <a href="#recensioni">Recensioni</a>
+      <a href="#contatti">Contatti</a>
+    </nav>
+    <a class="pill pill--solid head-cta" href="#contatti" data-wa="Buongiorno Daniela, vorrei prenotare una consulenza.">Prenota</a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="navPanel"><span></span></button>
+  </div>
+  <div class="nav-panel" id="navPanel">
+    <a href="#chi-sono">Chi sono</a>
+    <a href="#servizi">Servizi</a>
+    <a href="#come-funziona">Come funziona</a>
+    <a href="#recensioni">Recensioni</a>
+    <a href="#contatti">Contatti</a>
+    <a class="pill pill--solid" href="#contatti" data-wa="Buongiorno Daniela, vorrei prenotare una consulenza.">Prenota</a>
+  </div>
+</header>
+
+<main id="contenuto">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top" aria-label="Daniela Impastato, consulente d'immagine e personal shopper">
+  <div class="hero-img">
+    <img src="assets/img/daniela-divano.webp" width="358" height="598" fetchpriority="high" decoding="async" alt="Daniela Impastato seduta su un divano, in abito rosa antico, sorride verso l'obiettivo">
+  </div>
+  <div class="container hero-in">
+    <h1><span class="hero-line"><span>Daniela</span></span> <span class="hero-line"><span><em>Impastato</em></span></span></h1>
+    <p class="hero-sub">Consulente d'Immagine · Personal Shopper · Canale</p>
+    <div class="hero-cta">
+      <a class="pill pill--light" href="#contatti" data-wa="Buongiorno Daniela, vorrei prenotare una consulenza.">Prenota una consulenza
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STRISCIA ============ -->
+<div class="striscia" aria-hidden="true">
+  <div class="striscia-track">
+    <ul class="striscia-gruppo">
+      <li>Consulente d'immagine</li><li>Personal shopper</li><li>Canale</li><li>Roero</li><li><span class="todo">[DA COMPLETARE]</span></li>
+    </ul>
+    <ul class="striscia-gruppo" aria-hidden="true">
+      <li>Consulente d'immagine</li><li>Personal shopper</li><li>Canale</li><li>Roero</li><li><span class="todo">[DA COMPLETARE]</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============ CHI SONO ============ -->
+<section class="chi" id="chi-sono" aria-labelledby="chiTitolo">
+  <div class="container chi-grid">
+    <div class="chi-foto reveal">
+      <figure class="f1"><img src="assets/img/daniela-cartella-colori.webp" width="358" height="598" loading="lazy" decoding="async" alt="Daniela Impastato mostra una cartella di colori durante un incontro"></figure>
+      <figure class="f2"><img src="assets/img/daniela-presentazione.webp" width="358" height="598" loading="lazy" decoding="async" alt="Daniela Impastato davanti a un gruppo di persone, con un pannello di campioni in mano"></figure>
+      <p class="chi-didascalia">Daniela Impastato, consulente d'immagine e personal shopper</p>
+    </div>
+    <div class="chi-testo reveal" style="--d:.12s">
+      <span class="eyebrow">Daniela Impastato</span>
+      <h2 id="chiTitolo">Chi <em>sono</em></h2>
+      <p><span class="todo">[DA COMPLETARE: 2-3 frasi su Daniela, fornite da lei]</span></p>
+      <a class="pill pill--solid" href="#contatti" data-wa="Buongiorno Daniela, vorrei prenotare una consulenza.">Prenota una consulenza</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVIZI ============ -->
+<section class="servizi on-dark" id="servizi" aria-labelledby="serviziTitolo">
+  <div class="container reveal">
+    <div class="servizi-testa">
+      <span class="eyebrow">Consulenze</span>
+      <h2 id="serviziTitolo">I miei <em>servizi</em></h2>
+      <p><span class="todo">[DA COMPLETARE: una riga di introduzione]</span></p>
+    </div>
+  </div>
+
+  <div class="car" id="car" role="region" aria-roledescription="carosello" aria-label="Servizi">
+    <div class="car-track" id="carTrack" tabindex="0" aria-describedby="carAiuto">
+      <article class="card" aria-label="Scheda 1 di 5">
+        <div class="card-foto card-foto--vuota">
+          <div>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.2a2 2 0 1 1 2 2c-1.1 0-2 .9-2 2v.8M12 11 3.2 17a1.2 1.2 0 0 0 .7 2.2h16.2a1.2 1.2 0 0 0 .7-2.2z"/></svg>
+            <span class="todo">[FOTO DA COMPLETARE]</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="card-cat"><span class="todo">[DA COMPLETARE]</span></span>
+          <h3>Riorganizzazione guardaroba</h3>
+          <p><span class="todo">[DA COMPLETARE: una riga]</span></p>
+          <a class="pill pill--solid" href="#contatti" data-wa="Buongiorno Daniela, vorrei prenotare: Riorganizzazione guardaroba.">Prenota</a>
+        </div>
+      </article>
+      <article class="card" aria-label="Scheda 2 di 5">
+        <div class="card-foto"><img src="assets/img/consulenza-poltrone.webp" width="358" height="598" loading="lazy" decoding="async" alt="Due donne sedute su poltrone intrecciate in una sala, mentre conversano"></div>
+        <div class="card-body">
+          <span class="card-cat"><span class="todo">[DA COMPLETARE]</span></span>
+          <h3><span class="todo">[DA COMPLETARE]</span></h3>
+          <p><span class="todo">[DA COMPLETARE: una riga]</span></p>
+          <a class="pill pill--solid" href="#contatti" data-wa="Buongiorno Daniela, vorrei prenotare il servizio: [DA COMPLETARE]">Prenota</a>
+        </div>
+      </article>
+      <article class="card" aria-label="Scheda 3 di 5">
+        <div class="card-foto"><img src="assets/img/campionario-tessuti.webp" width="358" height="448" loading="lazy" decoding="async" alt="Campionario di tessuti in diverse tonalità, impilati su un tavolo"></div>
+        <div class="card-body">
+          <span class="card-cat"><span class="todo">[DA COMPLETARE]</span></span>
+          <h3><span class="todo">[DA COMPLETARE]</span></h3>
+          <p><span class="todo">[DA COMPLETARE: una riga]</span></p>
+          <a class="pill pill--solid" href="#contatti" data-wa="Buongiorno Daniela, vorrei prenotare il servizio: [DA COMPLETARE]">Prenota</a>
+        </div>
+      </article>
+      <article class="card" aria-label="Scheda 4 di 5">
+        <div class="card-foto"><img src="assets/img/tavolo-gruppo.webp" width="358" height="598" loading="lazy" decoding="async" alt="Gruppo di donne sedute a un lungo tavolo di legno, con Daniela in piedi sullo sfondo"></div>
+        <div class="card-body">
+          <span class="card-cat"><span class="todo">[DA COMPLETARE]</span></span>
+          <h3><span class="todo">[DA COMPLETARE]</span></h3>
+          <p><span class="todo">[DA COMPLETARE: una riga]</span></p>
+          <a class="pill pill--solid" href="#contatti" data-wa="Buongiorno Daniela, vorrei prenotare il servizio: [DA COMPLETARE]">Prenota</a>
+        </div>
+      </article>
+      <article class="card" aria-label="Scheda 5 di 5">
+        <div class="card-foto"><img src="assets/img/sala-tavolo.webp" width="358" height="598" loading="lazy" decoding="async" alt="Sala con travi a vista e grande finestra sul paesaggio, con persone sedute a tavola"></div>
+        <div class="card-body">
+          <span class="card-cat"><span class="todo">[DA COMPLETARE]</span></span>
+          <h3><span class="todo">[DA COMPLETARE]</span></h3>
+          <p><span class="todo">[DA COMPLETARE: una riga]</span></p>
+          <a class="pill pill--solid" href="#contatti" data-wa="Buongiorno Daniela, vorrei prenotare il servizio: [DA COMPLETARE]">Prenota</a>
+        </div>
+      </article>
+    </div>
+    <p class="sr" id="carAiuto">Usa le frecce sinistra e destra, oppure i pulsanti, per scorrere le schede.</p>
+    <div class="car-bar">
+      <button class="car-btn" id="carPrev" type="button" aria-label="Scheda precedente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+      <span class="car-conta" id="carConta" aria-live="polite">1 / 5</span>
+      <button class="car-btn" id="carNext" type="button" aria-label="Scheda successiva"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COME FUNZIONA ============ -->
+<section class="come" id="come-funziona" aria-labelledby="comeTitolo">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">Il percorso</span>
+      <h2 id="comeTitolo">Come <em>funziona</em></h2>
+    </div>
+    <ol class="passi" style="margin-top:3.2rem">
+      <li class="passo reveal"><span class="passo-n" aria-hidden="true">01</span><h3><span class="todo">[DA COMPLETARE]</span></h3><p><span class="todo">[DA COMPLETARE]</span></p></li>
+      <li class="passo reveal" style="--d:.1s"><span class="passo-n" aria-hidden="true">02</span><h3><span class="todo">[DA COMPLETARE]</span></h3><p><span class="todo">[DA COMPLETARE]</span></p></li>
+      <li class="passo reveal" style="--d:.2s"><span class="passo-n" aria-hidden="true">03</span><h3><span class="todo">[DA COMPLETARE]</span></h3><p><span class="todo">[DA COMPLETARE]</span></p></li>
+      <li class="passo reveal" style="--d:.3s"><span class="passo-n" aria-hidden="true">04</span><h3><span class="todo">[DA COMPLETARE]</span></h3><p><span class="todo">[DA COMPLETARE]</span></p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ RECENSIONI ============ -->
+<section class="recensioni" id="recensioni" aria-labelledby="recTitolo">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">Dicono di me</span>
+      <h2 id="recTitolo" style="margin-bottom:1.6rem">Le <em>recensioni</em></h2>
+      <div class="voto">
+        <div class="stelle" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.8 2.7 5.8 6.3.7-4.7 4.3 1.3 6.2L12 16.6l-5.6 3.2 1.3-6.2L3 9.3l6.3-.7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.8 2.7 5.8 6.3.7-4.7 4.3 1.3 6.2L12 16.6l-5.6 3.2 1.3-6.2L3 9.3l6.3-.7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.8 2.7 5.8 6.3.7-4.7 4.3 1.3 6.2L12 16.6l-5.6 3.2 1.3-6.2L3 9.3l6.3-.7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.8 2.7 5.8 6.3.7-4.7 4.3 1.3 6.2L12 16.6l-5.6 3.2 1.3-6.2L3 9.3l6.3-.7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.8 2.7 5.8 6.3.7-4.7 4.3 1.3 6.2L12 16.6l-5.6 3.2 1.3-6.2L3 9.3l6.3-.7z"/></svg>
+        </div>
+        <p>5,0 su Google · 15 recensioni</p>
+      </div>
+    </div>
+    <div class="rec-grid">
+      <figure class="rec reveal"><blockquote><span class="todo">[DA COMPLETARE: recensione 1, copiata alla lettera]</span></blockquote><figcaption><cite><span class="todo">[DA COMPLETARE: nome]</span></cite></figcaption></figure>
+      <figure class="rec reveal" style="--d:.1s"><blockquote><span class="todo">[DA COMPLETARE: recensione 2, copiata alla lettera]</span></blockquote><figcaption><cite><span class="todo">[DA COMPLETARE: nome]</span></cite></figcaption></figure>
+      <figure class="rec reveal" style="--d:.2s"><blockquote><span class="todo">[DA COMPLETARE: recensione 3, copiata alla lettera]</span></blockquote><figcaption><cite><span class="todo">[DA COMPLETARE: nome]</span></cite></figcaption></figure>
+    </div>
+    <!-- DA COMPLETARE: sostituire href con il link alla scheda Google -->
+    <a class="link reveal" href="#recensioni" data-todo-link>Leggi le recensioni su Google <span class="todo">[DA COMPLETARE: link]</span></a>
+  </div>
+</section>
+
+<!-- ============ PRENOTA ============ -->
+<section class="prenota" id="contatti" aria-labelledby="prenotaTitolo">
+  <div class="container prenota-grid">
+    <div class="reveal">
+      <span class="eyebrow">Contatti</span>
+      <h2 id="prenotaTitolo">Prenota la tua <em>consulenza</em></h2>
+      <p class="prenota-intro">Tre domande veloci: poi si apre WhatsApp con il messaggio già scritto, pronto da inviare.</p>
+
+      <form class="wiz" id="wiz" novalidate aria-label="Richiesta di consulenza">
+        <div class="wiz-top"><span id="wizPasso">Passo 1 di 3</span><span class="wiz-barra" aria-hidden="true"><i id="wizBarra"></i></span></div>
+
+        <fieldset data-step="1" tabindex="-1">
+          <legend>Cosa ti serve?</legend>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="serv" value="Riorganizzazione guardaroba"><span>Riorganizzazione guardaroba</span></label>
+            <label class="opt"><input type="radio" name="serv" value="[DA COMPLETARE]"><span><span class="todo">[DA COMPLETARE]</span></span></label>
+            <label class="opt"><input type="radio" name="serv" value="[DA COMPLETARE]"><span><span class="todo">[DA COMPLETARE]</span></span></label>
+            <label class="opt"><input type="radio" name="serv" value="[DA COMPLETARE]"><span><span class="todo">[DA COMPLETARE]</span></span></label>
+            <label class="opt"><input type="radio" name="serv" value="[DA COMPLETARE]"><span><span class="todo">[DA COMPLETARE]</span></span></label>
+            <label class="opt"><input type="radio" name="serv" value="Non lo so ancora, ne parliamo"><span>Non lo so ancora, ne parliamo</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset data-step="2" tabindex="-1" hidden>
+          <legend>Per quale occasione?</legend>
+          <label class="sr" for="occ">Racconta in due righe per quale occasione</label>
+          <textarea id="occ" name="occ" placeholder="Raccontami in due righe (puoi anche lasciare vuoto)"></textarea>
+        </fieldset>
+
+        <fieldset data-step="3" tabindex="-1" hidden>
+          <legend>Come preferisci essere contattata?</legend>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="cont" value="su WhatsApp"><span>Su WhatsApp</span></label>
+            <label class="opt"><input type="radio" name="cont" value="con una telefonata"><span>Con una telefonata</span></label>
+            <label class="opt"><input type="radio" name="cont" value="nel modo che preferisci tu"><span>Nel modo che preferisci tu</span></label>
+          </div>
+        </fieldset>
+
+        <p class="wiz-errore" id="wizErrore" role="alert"></p>
+        <div class="wiz-nav">
+          <button class="indietro" id="wizIndietro" type="button" hidden>Indietro</button>
+          <button class="pill pill--solid" id="wizAvanti" type="button">Avanti</button>
+        </div>
+        <p class="wiz-esito" id="wizEsito" role="status" hidden></p>
+      </form>
+    </div>
+
+    <div class="voce reveal" style="--d:.12s">
+      <h3>Preferisci parlarne a voce?</h3>
+      <p>Scrivimi su WhatsApp o chiamami: ti rispondo appena posso.</p>
+      <div class="azioni">
+        <a class="pill pill--solid" href="#contatti" id="waDiretto" data-wa="Buongiorno Daniela, vorrei parlare di una consulenza.">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.78h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88a9.82 9.82 0 0 1 6.99 2.9 9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88M20.46 3.49A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42"/></svg>
+          WhatsApp</a>
+        <a class="pill" href="tel:+39" id="telDiretto">Chiama <span class="todo">[DA COMPLETARE: numero]</span></a>
+      </div>
+      <figure class="studio">
+        <img src="assets/img/studio-facciata.webp" width="358" height="256" loading="lazy" decoding="async" alt="Facciata arancione dell'edificio dello studio, con portone e balconi, in Piazza Bernardi a Canale">
+        <figcaption class="studio-testo">
+          <strong>Lo studio</strong>
+          Piazza Bernardi 34, 12043 Canale (CN)<br>
+          <a href="https://www.google.com/maps/search/?api=1&query=Piazza+Bernardi+34+12043+Canale+CN" target="_blank" rel="noopener">Apri in Google Maps<span class="sr"> (si apre in una nuova scheda)</span></a>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="#top">Daniela <em>Impastato</em></a>
+        <p>Consulente d'Immagine | Personal Shopper</p>
+        <p>Piazza Bernardi 34, 12043 Canale (CN)</p>
+      </div>
+      <div>
+        <p>P.IVA <span class="todo">[DA COMPLETARE]</span></p>
+        <p>Instagram: <span class="todo">[DA COMPLETARE: link]</span></p>
+      </div>
+      <nav class="foot-link" aria-label="Link utili">
+        <a href="#chi-sono">Chi sono</a>
+        <a href="#servizi">Servizi</a>
+        <a href="#contatti">Contatti</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+    <small>© Daniela Impastato. Tutti i diritti riservati.</small>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  /* DA COMPLETARE: numero WhatsApp senza spazi né prefisso (es. 3331234567). Finché è vuoto, i pulsanti portano al modulo. */
+  var WA_NUMBER = '';
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function waUrl(text) { return WA_NUMBER ? 'https://wa.me/39' + WA_NUMBER + '?text=' + encodeURIComponent(text) : ''; }
+
+  /* link WhatsApp: con il numero impostato aprono direttamente la chat */
+  if (WA_NUMBER) {
+    document.querySelectorAll('[data-wa]').forEach(function (a) {
+      a.href = waUrl(a.getAttribute('data-wa'));
+      a.target = '_blank'; a.rel = 'noopener';
+    });
+    var tel = document.getElementById('telDiretto');
+    if (tel) tel.href = 'tel:+39' + WA_NUMBER;
+  }
+
+  /* ---------- Header e menu a scomparsa ---------- */
+  var head = document.getElementById('head');
+  var btn = document.getElementById('menuBtn');
+  var panel = document.getElementById('navPanel');
+  function onScroll() { head.classList.toggle('is-solid', window.scrollY > 40); }
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+  function setMenu(open) {
+    head.classList.toggle('is-open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Chiudi il menu' : 'Apri il menu');
+    panel.querySelectorAll('a').forEach(function (a) { a.tabIndex = open ? 0 : -1; });
+  }
+  setMenu(false);
+  btn.addEventListener('click', function () { setMenu(!head.classList.contains('is-open')); });
+  panel.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && head.classList.contains('is-open')) { setMenu(false); btn.focus(); } });
+  window.addEventListener('resize', function () { if (window.innerWidth >= 900) setMenu(false); });
+
+  /* voce di menu della sezione in vista */
+  var links = {};
+  document.querySelectorAll('.nav a').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
+  if ('IntersectionObserver' in window) {
+    var spy = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (e.isIntersecting && links[e.target.id]) {
+          Object.keys(links).forEach(function (k) { links[k].removeAttribute('aria-current'); });
+          links[e.target.id].setAttribute('aria-current', 'true');
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    Object.keys(links).forEach(function (id) { var s = document.getElementById(id); if (s) spy.observe(s); });
+
+    /* comparsa discreta allo scroll */
+    var rev = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); rev.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(function (el) { rev.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+  }
+
+  /* ---------- Carosello dei servizi ---------- */
+  var track = document.getElementById('carTrack');
+  var cards = Array.prototype.slice.call(track.querySelectorAll('.card'));
+  var prev = document.getElementById('carPrev');
+  var next = document.getElementById('carNext');
+  var conta = document.getElementById('carConta');
+  var current = 0, ticking = false;
+
+  function layout() {
+    ticking = false;
+    var mid = track.scrollLeft + track.clientWidth / 2, best = 0, bestD = Infinity;
+    cards.forEach(function (c, i) {
+      var cx = c.offsetLeft + c.offsetWidth / 2;
+      var d = (cx - mid) / c.offsetWidth;           /* 0 = centrata, ±1 = vicina */
+      var a = Math.min(Math.abs(d), 1.6);
+      if (!reduce) {
+        c.style.setProperty('--s', (1.04 - Math.min(a, 1) * 0.14).toFixed(3));
+        c.style.setProperty('--r', (Math.max(-1, Math.min(1, d)) * -16).toFixed(2) + 'deg');
+        c.style.setProperty('--o', (1 - Math.min(a, 1.6) * 0.28).toFixed(3));
+      }
+      if (Math.abs(d) < bestD) { bestD = Math.abs(d); best = i; }
+    });
+    if (best !== current) { current = best; }
+    conta.textContent = (current + 1) + ' / ' + cards.length;
+    prev.disabled = current === 0;
+    next.disabled = current === cards.length - 1;
+  }
+  function go(i) {
+    i = Math.max(0, Math.min(cards.length - 1, i));
+    var c = cards[i];
+    track.scrollTo({ left: c.offsetLeft + c.offsetWidth / 2 - track.clientWidth / 2, behavior: reduce ? 'auto' : 'smooth' });
+  }
+  track.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(layout); } }, { passive: true });
+  window.addEventListener('resize', layout);
+  prev.addEventListener('click', function () { go(current - 1); });
+  next.addEventListener('click', function () { go(current + 1); });
+  track.addEventListener('keydown', function (e) {
+    if (e.target !== track) return;
+    if (e.key === 'ArrowRight') { e.preventDefault(); go(current + 1); }
+    else if (e.key === 'ArrowLeft') { e.preventDefault(); go(current - 1); }
+    else if (e.key === 'Home') { e.preventDefault(); go(0); }
+    else if (e.key === 'End') { e.preventDefault(); go(cards.length - 1); }
+  });
+  /* chi naviga con Tab porta in centro la scheda a fuoco */
+  track.addEventListener('focusin', function (e) {
+    var c = e.target.closest && e.target.closest('.card');
+    if (c) go(cards.indexOf(c));
+  });
+  layout();
+
+  /* ---------- Richiesta guidata in 3 passi ---------- */
+  var form = document.getElementById('wiz');
+  var steps = Array.prototype.slice.call(form.querySelectorAll('[data-step]'));
+  var back = document.getElementById('wizIndietro');
+  var forward = document.getElementById('wizAvanti');
+  var label = document.getElementById('wizPasso');
+  var bar = document.getElementById('wizBarra');
+  var err = document.getElementById('wizErrore');
+  var esito = document.getElementById('wizEsito');
+  var step = 1;
+
+  function show(n, focus) {
+    step = n;
+    steps.forEach(function (s, i) { s.hidden = (i + 1) !== n; });
+    label.textContent = 'Passo ' + n + ' di 3';
+    bar.style.width = (n * 33.333) + '%';
+    back.hidden = n === 1;
+    forward.textContent = n === 3 ? 'Apri WhatsApp' : 'Avanti';
+    err.textContent = '';
+    if (focus) steps[n - 1].focus({ preventScroll: true });
+  }
+  function checked(name) { var c = form.querySelector('input[name="' + name + '"]:checked'); return c ? c.value : ''; }
+  function message() {
+    var occ = form.occ.value.trim();
+    return 'Buongiorno Daniela, vorrei prenotare una consulenza.\n' +
+      'Cosa mi serve: ' + checked('serv') + '\n' +
+      'Occasione: ' + (occ || 'ne parliamo') + '\n' +
+      'Preferisco essere contattato/a ' + checked('cont') + '.';
+  }
+  forward.addEventListener('click', function () {
+    if (step === 1 && !checked('serv')) { err.textContent = 'Scegli una voce per continuare.'; return; }
+    if (step === 3 && !checked('cont')) { err.textContent = 'Scegli come preferisci essere contattata.'; return; }
+    if (step < 3) { show(step + 1, true); return; }
+    var url = waUrl(message());
+    if (url) {
+      esito.hidden = true;
+      window.open(url, '_blank', 'noopener');
+    } else {
+      esito.hidden = false;
+      esito.textContent = 'Il numero WhatsApp non è ancora stato impostato: ecco il messaggio che verrebbe inviato. ' + message().replace(/\n/g, ' · ');
+    }
+  });
+  back.addEventListener('click', function () { show(step - 1, true); });
+  form.addEventListener('submit', function (e) { e.preventDefault(); });
+  show(1, false);
+})();
+</script>
+</body>
+</html>
