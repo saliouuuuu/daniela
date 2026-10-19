@@ -8,7 +8,7 @@ HTML, CSS e JavaScript scritti a mano: nessun framework, nessuna libreria, nessu
 - `public/index.html`: la pagina (CSS e JS inline)
 - `public/privacy.html`: informativa privacy
 - `public/assets/img/`: foto in WebP
-- `public/assets/fonts/`: Cormorant Garamond e DM Sans, ospitati sul sito
+- `public/assets/fonts/`: Arimo (grotesco in stile Helvetica), ospitato sul sito
 - `public/_headers`: intestazioni di sicurezza e cache (Cloudflare)
 - `wrangler.jsonc`: dice a Cloudflare di pubblicare solo la cartella `public/`
 
