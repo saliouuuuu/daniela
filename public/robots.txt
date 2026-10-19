@@ -1,5 +1,4 @@
+# DEMO: i motori di ricerca non devono indicizzare il sito.
+# Quando va online davvero: sostituire con "Allow: /" e aggiungere la riga Sitemap.
 User-agent: *
-Allow: /
-
-# DA COMPLETARE: quando c'è il dominio, aggiungere la riga
-# Sitemap: https://DOMINIO/sitemap.xml
+Disallow: /
