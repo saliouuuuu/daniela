@@ -8,6 +8,7 @@
 <meta name="theme-color" content="#FAF5EF">
 <!-- DEMO: non farsi indicizzare. Quando il sito va online davvero: "index, follow", togliere X-Robots-Tag da _headers e riaprire robots.txt -->
 <meta name="robots" content="noindex, nofollow">
+<meta name="author" content="Daniela Impastato">
 <meta name="geo.region" content="IT-CN">
 <meta name="geo.placename" content="Canale">
 <!-- DA COMPLETARE: sostituire dominio-da-completare.example con il dominio vero (canonical, Open Graph) -->
@@ -449,6 +450,84 @@ html.js:not(.rm) .foot-mark.in .l { transform: none; }
 .foot-link a { background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat; text-decoration: none; padding-bottom: 2px; transition: background-size .45s var(--ease); }
 .foot-link a:hover { background-size: 100% 1px; }
 
+/* ============ ANIMAZIONI, SECONDO GIRO ============ */
+/* hero sul computer: finché le foto sono miniature, la foto sta in un riquadro a destra
+   (per tornare a tutto schermo con gli originali basta togliere questo blocco) */
+@media (min-width: 900px) {
+  .hero { background: radial-gradient(60% 70% at 16% 90%, rgba(185, 138, 140, .3), transparent 70%), radial-gradient(50% 60% at 38% 8%, rgba(233, 207, 198, .1), transparent 70%), #2e1f1a; }
+  .hero-img { inset: 0 0 0 auto; width: min(47vw, 700px); }
+  .hero::before { background: linear-gradient(90deg, #2e1f1a 0%, #2e1f1a calc(100% - min(47vw, 700px)), rgba(46, 31, 26, 0) calc(100% - min(47vw, 700px) + 15vw)), linear-gradient(180deg, rgba(46, 31, 26, .4) 0%, rgba(46, 31, 26, 0) 30%, rgba(46, 31, 26, .5) 72%, rgba(46, 31, 26, .92) 100%); }
+  .scroll-hint { display: none; }
+}
+.hero-img img { translate: calc(var(--hmx, 0) * -16px) calc(var(--hmy, 0) * -10px); transition: translate .7s var(--ease); }
+.hero-in h1 { translate: calc(var(--hmx, 0) * 8px) calc(var(--hmy, 0) * 4px); transition: translate .9s var(--ease); }
+
+/* sigillo che ruota: gira da solo e ancora di più scorrendo */
+.badge { display: none; }
+@media (min-width: 900px) {
+  .badge { display: grid; place-items: center; position: absolute; z-index: 3; right: var(--pad); bottom: clamp(2.5rem, 9vh, 5.5rem); width: 132px; height: 132px; color: var(--avorio); text-decoration: none; opacity: calc(1 - var(--hs, 0) * 4); }
+  .badge-ring { position: absolute; inset: 0; rotate: calc(var(--hs, 0) * 540deg); }
+  .badge-ring svg { width: 100%; height: 100%; animation: ruota 28s linear infinite; }
+  .badge text { font: 700 8.1px var(--sans); text-transform: uppercase; fill: currentColor; }
+  .badge > svg { width: 28px; height: 28px; transition: translate .4s var(--ease); }
+  .badge:hover > svg { translate: 0 5px; }
+  html.js:not(.rm) .badge { animation: appare 1s var(--ease) 1.8s backwards; }
+}
+@keyframes ruota { to { transform: rotate(360deg); } }
+
+/* parole giganti a contorno che scorrono dietro alle sezioni */
+.bg-word { position: absolute; z-index: 0; left: 0; top: 50%; width: max-content; font-family: var(--display); font-weight: 700; text-transform: uppercase; letter-spacing: -.06em; line-height: .8; font-size: clamp(9rem, 24vw, 22rem); color: transparent; -webkit-text-stroke: 1.4px rgba(59, 42, 36, .13); white-space: nowrap; pointer-events: none; transform: translate3d(calc(var(--bw, 0) * -38%), -50%, 0); }
+.chi > .bg-word { z-index: 0; }
+.bg-word--rec { left: auto; right: -3vw; top: 22%; font-size: clamp(11rem, 36vw, 32rem); -webkit-text-stroke-color: rgba(59, 42, 36, .1); transform: translate3d(calc(var(--bw, 0) * -12vw), calc(var(--bw, 0) * 14%), 0); }
+.recensioni > .container { position: relative; z-index: 1; }
+
+/* testo che si accende parola per parola mentre scorri */
+.sw { display: inline; }
+html.js:not(.rm) [data-scrub] .sw { opacity: clamp(.16, calc(.16 + (var(--sp, 0) * var(--n, 1) - var(--i, 0)) * .9), 1); }
+
+/* come funziona: un punto dorato percorre il filo, il passo attivo si scurisce */
+.passi { position: relative; }
+@media (min-width: 1000px) {
+  .passi::after { content: ""; position: absolute; top: -4.5px; left: calc(var(--pp, 0) * (100% - 10px)); width: 10px; height: 10px; border-radius: 50%; background: var(--oro); box-shadow: 0 0 0 6px rgba(184, 149, 106, .22); z-index: 2; }
+}
+html.js:not(.rm) .passo.in.on .passo-n { color: var(--cacao); -webkit-text-stroke-color: var(--cacao); }
+html.js:not(.rm) .passo.in.on h3 { translate: 0 -3px; }
+.passo h3 { transition: translate .6s var(--ease); }
+
+/* recensioni: una scheda per volta si alza da sola */
+.rec.is-lit { translate: 0 -8px; rotate: 0deg; box-shadow: 0 34px 50px -30px rgba(59, 42, 36, .55); }
+
+/* carosello: barra di avanzamento */
+.car-prog { width: min(280px, 60%); height: 2px; margin: 0 auto 1.6rem; background: rgba(233, 207, 198, .22); border-radius: 2px; position: relative; overflow: hidden; }
+.car-prog i { position: absolute; left: 0; top: 0; height: 100%; width: 22%; background: var(--oro); border-radius: 2px; }
+
+/* modulo: bordo che gira lentamente */
+@property --ang { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
+.wiz { border: 1.5px solid transparent; background: linear-gradient(#fff9f4, #fff9f4) padding-box, conic-gradient(from var(--ang), #B8956A, #E9CFC6, #B98A8C, #E9CFC6, #B8956A) border-box; }
+html.js:not(.rm) .wiz { animation: giraBordo 10s linear infinite; }
+@keyframes giraBordo { to { --ang: 360deg; } }
+
+/* footer: le lettere si alzano vicino al mouse */
+.foot-mark .l { transition: translate .35s var(--ease); }
+
+/* navigazione a puntini sul bordo (computer) */
+.dots { position: fixed; right: 1.3rem; top: 50%; z-index: 120; transform: translateY(-50%); display: none; flex-direction: column; gap: 1.05rem; opacity: 0; pointer-events: none; transition: opacity .5s; }
+.dots.on { opacity: 1; pointer-events: auto; }
+@media (min-width: 1100px) { .dots { display: flex; } }
+.dots a { display: flex; align-items: center; justify-content: flex-end; gap: .7rem; text-decoration: none; color: var(--cacao); font-size: .68rem; font-weight: 700; letter-spacing: .01em; text-transform: uppercase; }
+.dots span { opacity: 0; transform: translateX(8px); transition: opacity .35s, transform .35s var(--ease); background: var(--avorio); padding: .22rem .6rem; border-radius: 999px; box-shadow: 0 8px 20px -8px rgba(59, 42, 36, .35); white-space: nowrap; }
+.dots a:hover span, .dots a:focus-visible span { opacity: 1; transform: none; }
+.dots i { width: 8px; height: 8px; border-radius: 50%; border: 1px solid #fff; mix-blend-mode: difference; transition: transform .4s var(--ease), background-color .3s; }
+.dots a[aria-current="true"] i { background: #fff; transform: scale(1.6); }
+
+/* cursore che segue il mouse */
+.cursor { position: fixed; left: 0; top: 0; z-index: 300; width: 34px; height: 34px; margin: -17px 0 0 -17px; border: 1px solid #fff; border-radius: 50%; pointer-events: none; mix-blend-mode: difference; opacity: 0; display: grid; place-items: center; color: #fff; font-size: .55rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; transition: width .4s var(--ease), height .4s var(--ease), margin .4s var(--ease), background-color .3s, opacity .3s, color .2s; will-change: transform; }
+.cursor.on { opacity: 1; }
+.cursor.is-link { width: 62px; height: 62px; margin: -31px 0 0 -31px; background: rgba(255, 255, 255, .2); }
+.cursor.is-drag { width: 88px; height: 88px; margin: -44px 0 0 -44px; mix-blend-mode: normal; border-color: transparent; background: var(--oro); color: var(--cacao); font-size: .62rem; }
+.cursor span { opacity: 0; transition: opacity .2s; }
+.cursor.is-drag span { opacity: 1; }
+
 /* ============ RIDUCI MOVIMENTO ============ */
 @media (prefers-reduced-motion: reduce) {
   html, .car-track { scroll-behavior: auto; }
@@ -467,6 +546,11 @@ html.js:not(.rm) .foot-mark.in .l { transform: none; }
   .card-foto img, .studio img { transform: none; }
   .rec { rotate: none; }
   .head.is-hidden { transform: none; }
+  .badge-ring svg, .wiz { animation: none; }
+  .bg-word { transform: translate3d(0, -50%, 0); }
+  .bg-word--rec { transform: none; }
+  .cursor { display: none; }
+  .hero-img img, .hero-in h1 { translate: none; }
 }
 @media print { .head, .striscia, body::after { display: none; } }
 </style>
@@ -474,6 +558,13 @@ html.js:not(.rm) .foot-mark.in .l { transform: none; }
 <body>
 <a class="skip" href="#contenuto">Salta al contenuto</a>
 <div class="prog" id="prog" aria-hidden="true"></div>
+<nav class="dots" aria-label="Sezioni della pagina">
+  <a href="#chi-sono"><span>Chi sono</span><i></i></a>
+  <a href="#servizi"><span>Servizi</span><i></i></a>
+  <a href="#come-funziona"><span>Come funziona</span><i></i></a>
+  <a href="#recensioni"><span>Recensioni</span><i></i></a>
+  <a href="#contatti"><span>Contatti</span><i></i></a>
+</nav>
 
 <header class="head" id="head">
   <div class="container head-in">
@@ -515,6 +606,10 @@ html.js:not(.rm) .foot-mark.in .l { transform: none; }
     </div>
   </div>
   <a class="scroll-hint" href="#chi-sono" aria-label="Scorri verso il basso"><span>Scorri</span><i></i></a>
+  <a class="badge" href="#chi-sono" aria-label="Consulente d'immagine · Personal shopper · Canale · Scorri verso il basso">
+    <span class="badge-ring" aria-hidden="true"><svg viewBox="0 0 120 120"><defs><path id="bp" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs><text><textPath href="#bp" textLength="286" lengthAdjust="spacing">Consulente d'immagine · Personal shopper · Canale · </textPath></text></svg></span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+  </a>
 </section>
 
 <!-- ============ STRISCIA ============ -->
@@ -531,6 +626,7 @@ html.js:not(.rm) .foot-mark.in .l { transform: none; }
 
 <!-- ============ CHI SONO ============ -->
 <section class="chi deriva" data-sheet id="chi-sono" aria-labelledby="chiTitolo">
+  <div class="bg-word" aria-hidden="true">Daniela Impastato</div>
   <div class="container chi-grid">
     <div class="chi-foto reveal">
       <figure class="f1 reveal-img" style="--rr:28px"><img src="assets/img/daniela-cartella-colori.webp" width="358" height="598" loading="lazy" decoding="async" alt="Daniela Impastato mostra una cartella di colori durante un incontro"></figure>
@@ -540,7 +636,7 @@ html.js:not(.rm) .foot-mark.in .l { transform: none; }
     <div class="chi-testo reveal" style="--d:.12s">
       <span class="eyebrow">Daniela Impastato</span>
       <h2 data-split id="chiTitolo">Chi <em>sono</em></h2>
-      <p><span class="todo">[DA COMPLETARE: 2-3 frasi su Daniela, fornite da lei]</span></p>
+      <p data-scrub><span class="todo">[DA COMPLETARE: 2-3 frasi su Daniela, fornite da lei]</span></p>
       <a class="pill pill--solid" href="#contatti" data-wa="Buongiorno Daniela, vorrei prenotare una consulenza.">Prenota una consulenza</a>
     </div>
   </div>
@@ -552,7 +648,7 @@ html.js:not(.rm) .foot-mark.in .l { transform: none; }
     <div class="servizi-testa">
       <span class="eyebrow">Consulenze</span>
       <h2 data-split id="serviziTitolo">I miei <em>servizi</em></h2>
-      <p><span class="todo">[DA COMPLETARE: una riga di introduzione]</span></p>
+      <p data-scrub><span class="todo">[DA COMPLETARE: una riga di introduzione]</span></p>
     </div>
   </div>
 
@@ -609,6 +705,7 @@ html.js:not(.rm) .foot-mark.in .l { transform: none; }
         </div>
       </article>
     </div>
+    <div class="car-prog" aria-hidden="true"><i></i></div>
     <p class="sr" id="carAiuto">Usa le frecce sinistra e destra, oppure i pulsanti, per scorrere le schede.</p>
     <div class="car-bar">
       <button class="car-btn" id="carPrev" type="button" aria-label="Scheda precedente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
@@ -636,6 +733,7 @@ html.js:not(.rm) .foot-mark.in .l { transform: none; }
 
 <!-- ============ RECENSIONI ============ -->
 <section class="recensioni" data-sheet id="recensioni" aria-labelledby="recTitolo">
+  <div class="bg-word bg-word--rec" aria-hidden="true">5,0</div>
   <div class="container">
     <div class="reveal">
       <span class="eyebrow">Dicono di me</span>
@@ -667,7 +765,7 @@ html.js:not(.rm) .foot-mark.in .l { transform: none; }
     <div class="reveal">
       <span class="eyebrow">Contatti</span>
       <h2 data-split id="prenotaTitolo">Prenota la tua <em>consulenza</em></h2>
-      <p class="prenota-intro">Tre domande veloci: poi si apre WhatsApp con il messaggio già scritto, pronto da inviare.</p>
+      <p class="prenota-intro" data-scrub>Tre domande veloci: poi si apre WhatsApp con il messaggio già scritto, pronto da inviare.</p>
 
       <form class="wiz" id="wiz" novalidate aria-label="Richiesta di consulenza">
         <div class="wiz-top"><span id="wizPasso">Passo 1 di 3</span><span class="wiz-barra" aria-hidden="true"><i id="wizBarra"></i></span></div>
@@ -795,13 +893,13 @@ html.js:not(.rm) .foot-mark.in .l { transform: none; }
 
   /* voce di menu della sezione in vista */
   var links = {};
-  document.querySelectorAll('.nav a').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
+  document.querySelectorAll('.nav a, .dots a').forEach(function (a) { var k = a.getAttribute('href').slice(1); (links[k] = links[k] || []).push(a); });
   if ('IntersectionObserver' in window) {
     var spy = new IntersectionObserver(function (es) {
       es.forEach(function (e) {
         if (e.isIntersecting && links[e.target.id]) {
-          Object.keys(links).forEach(function (k) { links[k].removeAttribute('aria-current'); });
-          links[e.target.id].setAttribute('aria-current', 'true');
+          Object.keys(links).forEach(function (k) { links[k].forEach(function (a) { a.removeAttribute('aria-current'); }); });
+          links[e.target.id].forEach(function (a) { a.setAttribute('aria-current', 'true'); });
         }
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
@@ -1146,6 +1244,153 @@ html.js:not(.rm) .foot-mark.in .l { transform: none; }
         });
       });
     }
+  }
+})();
+</script>
+<div class="cursor" id="cursor" aria-hidden="true"><span>Trascina</span></div>
+<script>
+/* Animazioni, secondo giro: parole giganti, testo che si accende, filo dei passi,
+   recensioni che si alzano, cursore, puntini di navigazione, lettere del footer. */
+(function () {
+  'use strict';
+  if (document.documentElement.classList.contains('rm')) return;
+  var fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
+
+  /* ---- testo che si accende parola per parola ---- */
+  var scrubs = Array.prototype.slice.call(document.querySelectorAll('[data-scrub]'));
+  scrubs.forEach(function (el) {
+    var idx = 0;
+    (function walk(node) {
+      Array.prototype.slice.call(node.childNodes).forEach(function (n) {
+        if (n.nodeType === 3) {
+          var frag = document.createDocumentFragment();
+          n.textContent.split(/(\s+)/).forEach(function (t) {
+            if (!t) return;
+            if (/^\s+$/.test(t)) { frag.appendChild(document.createTextNode(' ')); return; }
+            var w = document.createElement('span'); w.className = 'sw'; w.style.setProperty('--i', idx++); w.textContent = t; frag.appendChild(w);
+          });
+          node.replaceChild(frag, n);
+        } else if (n.nodeType === 1) { walk(n); }
+      });
+    })(el);
+    el.style.setProperty('--n', idx);
+  });
+
+  var hero = document.querySelector('.hero');
+  var bgWords = [document.querySelector('.chi'), document.querySelector('.recensioni')];
+  var passi = document.querySelector('.passi');
+  var steps = passi ? Array.prototype.slice.call(passi.querySelectorAll('.passo')) : [];
+  var car = document.getElementById('carTrack');
+  var thumb = document.querySelector('.car-prog i');
+  var dots = document.querySelector('.dots');
+  var busy = false;
+
+  function frame() {
+    busy = false;
+    var vh = window.innerHeight, y = window.scrollY;
+    scrubs.forEach(function (el) {
+      var r = el.getBoundingClientRect();
+      el.style.setProperty('--sp', clamp((vh * 0.9 - r.top) / (vh * 0.45), 0, 1).toFixed(3));
+    });
+    bgWords.forEach(function (sec) {
+      if (!sec) return;
+      var r = sec.getBoundingClientRect();
+      sec.style.setProperty('--bw', clamp((vh - r.top) / (vh + r.height), 0, 1).toFixed(3));
+    });
+    if (passi) {
+      var pr = passi.getBoundingClientRect();
+      var pp = clamp((vh * 0.85 - pr.top) / (vh * 0.5), 0, 1);
+      passi.style.setProperty('--pp', pp.toFixed(3));
+      steps.forEach(function (st, i) {
+        var on = window.innerWidth >= 1000 ? pp >= i / 3.6 + 0.02 : st.getBoundingClientRect().top < vh * 0.62;
+        st.classList.toggle('on', on);
+      });
+    }
+    if (dots) dots.classList.toggle('on', y > vh * 0.6);
+  }
+  function tick() { if (!busy) { busy = true; requestAnimationFrame(frame); } }
+  window.addEventListener('scroll', tick, { passive: true });
+  window.addEventListener('resize', tick);
+  frame();
+
+  /* ---- barra del carosello ---- */
+  if (car && thumb) {
+    var upd = function () {
+      var max = car.scrollWidth - car.clientWidth, p = max > 0 ? car.scrollLeft / max : 0;
+      var track = thumb.parentElement.clientWidth, w = thumb.offsetWidth;
+      thumb.style.transform = 'translateX(' + (p * (track - w)).toFixed(1) + 'px)';
+    };
+    car.addEventListener('scroll', function () { requestAnimationFrame(upd); }, { passive: true });
+    upd();
+  }
+
+  /* ---- recensioni: una scheda per volta si alza ---- */
+  var recs = Array.prototype.slice.call(document.querySelectorAll('.rec'));
+  if (recs.length) {
+    var cur = -1, paused = false;
+    recs.forEach(function (r) {
+      r.addEventListener('pointerenter', function () { paused = true; recs.forEach(function (x) { x.classList.remove('is-lit'); }); });
+      r.addEventListener('pointerleave', function () { paused = false; });
+    });
+    setInterval(function () {
+      if (paused || document.hidden) return;
+      var rect = recs[0].parentElement.getBoundingClientRect();
+      if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+      cur = (cur + 1) % recs.length;
+      recs.forEach(function (x, i) { x.classList.toggle('is-lit', i === cur); });
+    }, 3200);
+  }
+
+  if (!fine) return;
+
+  /* ---- mouse sull'hero ---- */
+  if (hero) {
+    hero.addEventListener('pointermove', function (e) {
+      var r = hero.getBoundingClientRect();
+      hero.style.setProperty('--hmx', (((e.clientX - r.left) / r.width) * 2 - 1).toFixed(3));
+      hero.style.setProperty('--hmy', (((e.clientY - r.top) / r.height) * 2 - 1).toFixed(3));
+    });
+    hero.addEventListener('pointerleave', function () { hero.style.setProperty('--hmx', 0); hero.style.setProperty('--hmy', 0); });
+  }
+
+  /* ---- lettere del footer che si alzano vicino al mouse ---- */
+  var fm = document.getElementById('footMark');
+  if (fm) {
+    var ls = Array.prototype.slice.call(fm.querySelectorAll('.l'));
+    fm.parentElement.addEventListener('pointermove', function (e) {
+      if (!fm.classList.contains('in')) return;
+      ls.forEach(function (l) {
+        var r = l.getBoundingClientRect(), dx = e.clientX - (r.left + r.width / 2), dy = e.clientY - (r.top + r.height / 2);
+        var k = clamp(1 - Math.hypot(dx, dy) / 170, 0, 1);
+        l.style.translate = '0 ' + (-k * k * 22).toFixed(1) + 'px';
+      });
+    });
+    fm.parentElement.addEventListener('pointerleave', function () { ls.forEach(function (l) { l.style.translate = ''; }); });
+  }
+
+  /* ---- cursore ---- */
+  var cu = document.getElementById('cursor');
+  if (cu) {
+    var tx = -100, ty = -100, x = -100, y2 = -100, run = false;
+    function loop() {
+      x += (tx - x) * 0.22; y2 += (ty - y2) * 0.22;
+      cu.style.transform = 'translate3d(' + x.toFixed(1) + 'px,' + y2.toFixed(1) + 'px,0)';
+      if (Math.abs(tx - x) > 0.1 || Math.abs(ty - y2) > 0.1) requestAnimationFrame(loop); else run = false;
+    }
+    document.addEventListener('pointermove', function (e) {
+      if (e.pointerType !== 'mouse') return;
+      tx = e.clientX; ty = e.clientY; cu.classList.add('on');
+      if (!run) { run = true; requestAnimationFrame(loop); }
+      var t = e.target.closest ? e.target : null;
+      var link = t && t.closest('a, button, .opt, input, textarea, label');
+      var drag = t && t.closest('.car-track') && !link;
+      cu.classList.toggle('is-link', !!link && !drag);
+      cu.classList.toggle('is-drag', !!drag);
+    }, { passive: true });
+    document.documentElement.addEventListener('pointerleave', function () { cu.classList.remove('on'); });
+    document.addEventListener('pointerdown', function () { cu.style.scale = '.85'; });
+    document.addEventListener('pointerup', function () { cu.style.scale = ''; });
   }
 })();
 </script>
